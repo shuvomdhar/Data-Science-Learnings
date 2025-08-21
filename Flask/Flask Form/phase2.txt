@@ -1,0 +1,24 @@
+FORMS
+1- name
+2- POST
+3- make sure match
+
+--------------------
+JINJA 2
+
+1- python values
+{{ variable }}
+
+{{ name }}
+
+<p>Welcome {{name}}</p>
+
+2- conditionals
+is_topper = True
+
+{% if is_topper %}
+<p>You are a topper</p>
+
+{% else %}
+<p>You need to work hard</p>
+{% endif %}
