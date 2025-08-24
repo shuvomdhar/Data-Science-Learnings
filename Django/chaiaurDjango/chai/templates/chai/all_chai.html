@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chai aur Django
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Chai aur Django - Home</h1>
+</header>
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</nav>
+<div class="container">
+    <h2 class="text-xl font-semibold">All Chai Varieties</h2>
+    <p class="text-gray-600">Explore our diverse range of chai varieties, each with its unique flavor and aroma.</p>
+</div>
+
+<div class="grid grid-cols-3 gap-4 m-4">
+
+    {% for chai in chais %}
+    <div class="bg-green-700 p-4 rounded justify-items-center">
+        <img class="rounded" src="{{ chai.image.url }}" alt="{{ chai.name }}">
+        <h3 class="text-xl font-semibold">{{ chai.name }}</h3>
+        <p class="text-gray-300">Date Added: {{ chai.date_added }}</p>
+        <a href="{% url 'chai_detail' chai.id %}">
+            <button class="bg-orange-500 text-white p-2 my-2 rounded hover:bg-orange-600">
+                {{chai.type}} - {{chai.id}}
+            </button>
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

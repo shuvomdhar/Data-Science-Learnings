@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chai aur Django
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1 class="bg-orange-500 text-3xl">Chai aur Django - Home</h1>
+</header>
+<nav>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'all_chai' %}">Chai</a>
+</nav>
+<div class="container">
+    <p class="text-center text-2xl font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, incidunt!</p>
+    <h2>Welcome!</h2>
+    <p>This is the <b>Chai aur Django</b> website. 🎉</p>
+    <p>You can explore the About page to learn more, or head over to the Contact page to reach out.</p>
+</div>
+{% endblock %}
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Django</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Chai aur Django - Home</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>This is the <b>Chai aur Django</b> website. 🎉</p>
+        <p>You can explore the About page to learn more, or head over to the Contact page to reach out.</p>
+    </div>
+</body>
+
+</html> -->
