@@ -1,0 +1,8 @@
+import cv2
+
+image = cv2.imread('Image/random.jpeg')
+
+if image is None:
+    print("Error: Image does not load")
+else:
+    print("Image loaded successfully")
